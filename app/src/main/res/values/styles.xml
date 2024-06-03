@@ -1,0 +1,117 @@
+<resources>
+    <!-- Стиль для styleSumbol_A -->
+    <style name="styleSumbol_A" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/Blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- Стиль для styleValToka -->
+    <style name="styleValToka" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/Blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- Стиль для styleChoice -->
+    <style name="styleChoice" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/Blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- Стиль для styleNameLine -->
+    <style name="styleNameLine" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">273dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/Blue</item>
+<!--        <item name="android:textStyle">bold</item>-->
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- Стиль для статус -->
+    <style name="статус" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">39dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- Стиль для Batt -->
+    <style name="styleBatt" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- Стиль для Icon .Help-->
+    <style name="styleIconHelp">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- Стиль для text .Help-->
+    <style name="styleTextHelp">
+        <item name="android:layout_width">337dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#3106ED</item>
+<!--        центрование текста в нутри блока -->
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">bold</item>
+        <!--        <item name="android:textStyle">italic</item>-->
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:background">@null</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>
+
+<!--
+     android:textAlignment="viewStart"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        android:typeface="normal"
+        android:visibility="visible"
+-->

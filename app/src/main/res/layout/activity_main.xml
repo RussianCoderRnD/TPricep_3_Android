@@ -5,15 +5,463 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/White"
+    android:theme="@style/FullscreenTheme"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="368dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textStatusBat"
+        app:srcCompat="@drawable/logo" />
+
+
+
+    <!--    android:src="@drawable/arrowgreendown"-->
+
+    <ImageView
+        android:id="@+id/imageViewChoiceLG"
+        style="@style/статус"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+    <ImageView
+        android:id="@+id/imageViewChoicePG"
+        style="@style/статус"
+        app:layout_constraintStart_toStartOf="@+id/imageViewChoiceLG"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewChoiceLG" />
+
+    <ImageView
+        android:id="@+id/imageViewChoiceLP"
+        style="@style/статус"
+        app:layout_constraintStart_toStartOf="@+id/imageViewChoiceLG"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewChoicePG" />
+
+    <ImageView
+        android:id="@+id/imageViewChoicePP"
+        style="@style/статус"
+        app:layout_constraintStart_toStartOf="@+id/imageViewChoiceLG"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewChoiceLP" />
+
+    <ImageView
+        android:id="@+id/imageViewChoiceSTOP"
+        style="@style/статус"
+        app:layout_constraintStart_toStartOf="@+id/imageViewChoiceLG"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewChoicePP" />
+
+    <ImageView
+        android:id="@+id/imageViewChoiceZX"
+        style="@style/статус"
+        app:layout_constraintStart_toStartOf="@+id/imageViewChoiceLG"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewChoiceSTOP" />
+
+    <ImageView
+        android:id="@+id/imageViewChoiceFOG"
+        style="@style/статус"
+        app:layout_constraintStart_toStartOf="@+id/imageViewChoiceLG"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewChoiceZX" />
+
+    <ImageButton
+        android:id="@+id/кнопкаПереТест"
+        android:layout_width="166dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/returnes"
+        app:layout_constraintBottom_toBottomOf="@+id/imageInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageInfo"
+        tools:visibility="visible" />
+
+    <!--    PG   -->
+    <ImageView
+        android:id="@+id/статус_LG"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_LG"
+        app:layout_constraintTop_toTopOf="@+id/imageViewChoiceLG"
+        tools:ignore="MissingConstraints" />
+
+
+    <!--    LP  -->
+    <ImageView
+        android:id="@+id/статус_PG"
+        style="@style/статус"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_PG"
+        app:layout_constraintTop_toBottomOf="@+id/статус_LG"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_LP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_LP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_PG"
+        tools:ignore="MissingConstraints" />
+
+    <!--    PP   -->
+
+    <ImageView
+        android:id="@+id/статус_ок_PP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_PP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_LP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_кз_PP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_PP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_LP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_больше_PP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_PP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_LP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_меньше_PP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_PP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_LP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_обрыв_PP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_PP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_LP"
+        tools:ignore="MissingConstraints" />
+
+
+    <!--    STOP   -->
+    <ImageView
+        android:id="@+id/статус_ок_STOP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_STOP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_PP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_кз_STOP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_STOP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_PP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_больше_STOP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_STOP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_PP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_меньше_STOP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_STOP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_PP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_обрыв_STOP"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_STOP"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_PP"
+        tools:ignore="MissingConstraints" />
+
+
+    <!--    ZX   -->
+
+    <ImageView
+        android:id="@+id/статус_ок_ZX"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_ZX"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_STOP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_кз_ZX"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_ZX"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_STOP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_больше_ZX"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_ZX"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_STOP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_меньше_ZX"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_ZX"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_STOP"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_обрыв_ZX"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_ZX"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_STOP"
+        tools:ignore="MissingConstraints" />
+
+
+    <!--    FOG   -->
+
+    <ImageView
+        android:id="@+id/статус_ок_FOG"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_FOG"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_ZX"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_кз_FOG"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_FOG"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_ZX"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_больше_FOG"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_FOG"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_ZX"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_меньше_FOG"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_FOG"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_ZX"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_обрыв_FOG"
+        style="@style/статус"
+        app:layout_constraintEnd_toStartOf="@+id/значенияТока_FOG"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок_ZX"
+        tools:ignore="MissingConstraints" />
+
+
+<!--  значенияТока  -->
+
+    <TextView
+        android:id="@+id/значенияТока_LG"
+        style="@style/styleValToka"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/статус_LG"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/значенияТока_PG"
+        style="@style/styleValToka"
+
+        app:layout_constraintEnd_toEndOf="@+id/значенияТока_LG"
+        app:layout_constraintTop_toBottomOf="@+id/значенияТока_LG"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/значенияТока_LP"
+        style="@style/styleValToka"
+        app:layout_constraintEnd_toEndOf="@+id/значенияТока_LG"
+        app:layout_constraintTop_toBottomOf="@+id/значенияТока_PG"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/значенияТока_PP"
+        style="@style/styleValToka"
+        app:layout_constraintEnd_toEndOf="@+id/значенияТока_LG"
+        app:layout_constraintTop_toBottomOf="@+id/значенияТока_LP"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/значенияТока_STOP"
+        style="@style/styleValToka"
+        app:layout_constraintEnd_toEndOf="@+id/значенияТока_LG"
+        app:layout_constraintTop_toBottomOf="@+id/значенияТока_PP"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/значенияТока_ZX"
+        style="@style/styleValToka"
+        app:layout_constraintEnd_toEndOf="@+id/значенияТока_LG"
+        app:layout_constraintTop_toBottomOf="@+id/значенияТока_STOP"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/значенияТока_FOG"
+        style="@style/styleValToka"
+        app:layout_constraintEnd_toEndOf="@+id/значенияТока_LG"
+        app:layout_constraintTop_toBottomOf="@+id/значенияТока_ZX"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageInfo"
+        android:layout_width="67dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/down"
+        app:srcCompat="@drawable/inform"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageExit"
+        android:layout_width="60dp"
+        android:layout_height="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textStatusBat"
+        app:srcCompat="@android:drawable/ic_delete"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/statusWiFi"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/wifi_off"
+        android:text="WiFi"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/textStatusBat"
+        app:layout_constraintTop_toTopOf="@+id/textStatusBat"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/statusBatt"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="10dp"
+        android:text="WiFi"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageExit"
+        app:layout_constraintTop_toTopOf="@+id/textStatusBat"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textStatusBat"
+        style="@style/styleBatt"
+        android:layout_width="58dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/statusBatt"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="119dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewChoiceLG"
+        app:layout_constraintStart_toEndOf="@+id/imageViewChoiceLG"
+        app:layout_constraintTop_toTopOf="@+id/imageViewChoiceLG"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/lg_text" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="140dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewChoicePG"
+        app:layout_constraintStart_toEndOf="@+id/imageViewChoicePG"
+        app:layout_constraintTop_toTopOf="@+id/imageViewChoicePG"
+        app:srcCompat="@drawable/pg_text" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="127dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewChoiceLP"
+        app:layout_constraintStart_toEndOf="@+id/imageViewChoiceLP"
+        app:layout_constraintTop_toTopOf="@+id/imageViewChoiceLP"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/lp_text" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewChoicePP"
+        app:layout_constraintStart_toEndOf="@+id/imageViewChoicePP"
+        app:layout_constraintTop_toTopOf="@+id/imageViewChoicePP"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/pp_text" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="117dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewChoiceSTOP"
+        app:layout_constraintStart_toEndOf="@+id/imageViewChoiceSTOP"
+        app:layout_constraintTop_toTopOf="@+id/imageViewChoiceSTOP"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/stop_text" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewChoiceZX"
+        app:layout_constraintStart_toEndOf="@+id/imageViewChoiceZX"
+        app:layout_constraintTop_toTopOf="@+id/imageViewChoiceZX"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/zx_text" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="156dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewChoiceFOG"
+        app:layout_constraintStart_toEndOf="@+id/imageViewChoiceFOG"
+        app:layout_constraintTop_toTopOf="@+id/imageViewChoiceFOG"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fog_text" />
+
+    <ImageButton
+        android:id="@+id/up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:srcCompat="@drawable/arrowgreen" />
+
+    <ImageButton
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/up"
+        android:background="@null"
+        app:srcCompat="@drawable/arrowgreendown" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

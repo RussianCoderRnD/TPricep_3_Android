@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:theme="@style/FullscreenTheme"
+    tools:context=".Help">
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="368dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/статус_ок"
+        style="@style/styleIconHelp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo"
+        app:srcCompat="@drawable/ok" />
+
+    <ImageView
+        android:id="@+id/статус_кз"
+        style="@style/styleIconHelp"
+        app:layout_constraintStart_toStartOf="@+id/статус_ок"
+        app:layout_constraintTop_toBottomOf="@+id/статус_ок"
+        app:srcCompat="@drawable/fulse" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_больше"
+        style="@style/styleIconHelp"
+        app:layout_constraintStart_toStartOf="@+id/статус_ок"
+        app:layout_constraintTop_toBottomOf="@+id/статус_кз"
+        app:srcCompat="@drawable/vnimaniehi" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_меньше"
+        style="@style/styleIconHelp"
+        app:layout_constraintStart_toStartOf="@+id/статус_ок"
+        app:layout_constraintTop_toBottomOf="@+id/статус_внимание_больше"
+        app:srcCompat="@drawable/vnimanielo" />
+
+    <ImageView
+        android:id="@+id/статус_внимание_обрыв"
+        style="@style/styleIconHelp"
+        app:layout_constraintStart_toStartOf="@+id/статус_ок"
+        app:layout_constraintTop_toBottomOf="@+id/статус_внимание_меньше"
+        app:srcCompat="@drawable/obriv" />
+
+    <ImageView
+        android:id="@+id/imageReturn"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/ret" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="-5dp"
+        app:layout_constraintStart_toEndOf="@+id/статус_ок"
+        app:layout_constraintTop_toTopOf="@+id/статус_внимание_больше"
+        app:srcCompat="@drawable/mit_hi_1" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/статус_внимание_больше"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:srcCompat="@drawable/mit_hi_2" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/статус_внимание_обрыв"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/статус_внимание_обрыв"
+        app:srcCompat="@drawable/obriv_text" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/статус_ок"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/статус_ок"
+        app:srcCompat="@drawable/ok_text" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/статус_кз"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/статус_кз"
+        app:srcCompat="@drawable/fulse_text" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/статус_внимание_меньше"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/статус_внимание_меньше"
+        app:srcCompat="@drawable/mit_lo_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
