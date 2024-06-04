@@ -106,6 +106,21 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+<!--скрыть статусную строку.
+ <activity
+            android:theme="@style/AppTheme.NoStatusBar"
+            android:name=".MainActivity"
+            android:exported="true" />
+            -->
+    <style name="AppTheme.NoStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
 </resources>
 
 <!--

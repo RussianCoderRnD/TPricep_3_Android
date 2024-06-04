@@ -9,13 +9,13 @@
     android:theme="@style/FullscreenTheme"
     tools:context=".WelcomActivity">
 
-    <Button
+    <ImageButton
         android:id="@+id/startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="137dp"
+        android:layout_height="56dp"
+        android:background="@color/White"
         android:layout_centerInParent="true"
         android:layout_marginBottom="30dp"
-        android:text="ПРИНЯТЬ"
         android:textColor="#0205A7"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,13 +56,12 @@
         app:srcCompat="@drawable/welcome_text" />
 
     <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="201dp"
+        android:id="@+id/imageView5"
+        android:layout_width="202dp"
         android:layout_height="68dp"
-        android:background="@color/White"
         app:layout_constraintBottom_toBottomOf="@+id/startButton"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/startButton"
+        app:layout_constraintStart_toStartOf="@+id/startButton"
         app:layout_constraintTop_toTopOf="@+id/startButton"
         app:srcCompat="@drawable/wew" />
 

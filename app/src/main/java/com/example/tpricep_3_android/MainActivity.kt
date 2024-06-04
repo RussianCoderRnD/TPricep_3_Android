@@ -74,9 +74,12 @@ class MainActivity : AppCompatActivity() {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_main)
 
+//        // Скрыть статусную строку
+//        View.SYSTEM_UI_FLAG_FULLSCREEN.also { window.decorView.systemUiVisibility = it }
+//        actionBar?.hide()
         // Скрыть статусную строку
-        View.SYSTEM_UI_FLAG_FULLSCREEN.also { window.decorView.systemUiVisibility = it }
-        actionBar?.hide()
+//        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+//        actionBar?.hide()
 
         // Проверяем, нужно ли закрыть приложение
         if (intent.getBooleanExtra("EXIT", false)) {

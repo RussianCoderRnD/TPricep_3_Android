@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import android.graphics.Color
 import android.content.pm.ActivityInfo
 import android.view.View
+import android.widget.ImageButton
 
 class WelcomActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,15 +23,15 @@ class WelcomActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcom)
 
         // Скрыть статусную строку
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        actionBar?.hide()
+//        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+//        actionBar?.hide()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val startButton: Button = findViewById(R.id.startButton)
+        val startButton: ImageButton = findViewById(R.id.startButton)
         startButton.setOnClickListener {
             // При нажатии на кнопку запускаем MainActivity
             startActivity(Intent(this, MainActivity::class.java))

@@ -16,12 +16,15 @@
         android:theme="@style/Theme.TPricep_3_Android"
         tools:targetApi="31">
         <activity
+            android:theme="@style/AppTheme.NoStatusBar"
             android:name=".MainActivity"
             android:exported="true" />
         <activity
+            android:theme="@style/AppTheme.NoStatusBar"
             android:name=".Help"
             android:exported="true" />
         <activity
+            android:theme="@style/AppTheme.NoStatusBar"
             android:name=".WelcomActivity"
             android:exported="true">
             <intent-filter>
