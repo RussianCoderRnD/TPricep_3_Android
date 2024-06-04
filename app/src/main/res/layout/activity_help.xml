@@ -70,19 +70,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="-5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/статус_внимание_больше"
         app:layout_constraintStart_toEndOf="@+id/статус_ок"
         app:layout_constraintTop_toTopOf="@+id/статус_внимание_больше"
         app:srcCompat="@drawable/mit_hi_1" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="-3dp"
-        app:layout_constraintBottom_toBottomOf="@+id/статус_внимание_больше"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:srcCompat="@drawable/mit_hi_2" />
 
     <ImageView
         android:id="@+id/imageView6"
